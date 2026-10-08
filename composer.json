@@ -1,0 +1,50 @@
+{
+    "name": "jasbros2568/laravel-360-view",
+    "description": "A dependency-free 360° product viewer (image-sequence spin) for Laravel: Blade component, drag / touch / keyboard rotation, autoplay, and helpers to upload and list frames.",
+    "keywords": ["laravel", "360", "360-view", "product-viewer", "spin", "image-sequence", "blade-component", "ecommerce"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {"name": "jasbros2568", "email": "jasbros2568@gmail.com"}
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/contracts": "^11.0|^12.0|^13.0",
+        "illuminate/filesystem": "^11.0|^12.0|^13.0",
+        "illuminate/http": "^11.0|^12.0|^13.0",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "illuminate/view": "^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0|^11.0",
+        "phpunit/phpunit": "^11.0|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "jasbros2568\\View360\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "jasbros2568\\View360\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "jasbros2568\\View360\\View360ServiceProvider"
+            ],
+            "aliases": {
+                "View360": "jasbros2568\\View360\\Facades\\View360"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
